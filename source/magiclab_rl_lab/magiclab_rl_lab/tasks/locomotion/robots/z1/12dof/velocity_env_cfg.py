@@ -456,15 +456,6 @@ class RewardsCfg:
         },
     )
     '''
-    # feet_air_time = RewTerm(
-    #     func=mdp.feet_air_time,
-    #     weight=0.1,
-    #     params={
-    #         "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*"),
-    #         "command_name": "base_velocity",
-    #         "threshold": 0.5,
-    #     },
-    # )
 
     feet_contact_number = RewTerm(
         func=mdp.feet_contact_number,
