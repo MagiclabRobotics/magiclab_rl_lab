@@ -68,7 +68,6 @@ datasets
 *.pt
 *.obj
 *.mtl
-*.STL
 **/env.yaml
 
 # Mimic
