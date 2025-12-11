@@ -214,18 +214,18 @@ class ActionsCfg:
     JointPositionAction = mdp.JointPositionActionCfg(
         asset_name="robot", 
         joint_names=[
-            "JOINT_HIP_PITCH_L",
-            "JOINT_HIP_ROLL_L",
-            "JOINT_HIP_YAW_L",
-            "JOINT_KNEE_PITCH_L",
-            "JOINT_ANKLE_PITCH_L",
-            "JOINT_ANKLE_ROLL_L",
-            "JOINT_HIP_PITCH_R",
-            "JOINT_HIP_ROLL_R",
-            "JOINT_HIP_YAW_R",
-            "JOINT_KNEE_PITCH_R",
-            "JOINT_ANKLE_PITCH_R",
-            "JOINT_ANKLE_ROLL_R",
+            "left_hip_pitch_joint",
+            "left_hip_roll_joint",
+            "left_hip_yaw_joint",
+            "left_knee_joint",
+            "left_ankle_pitch_joint",
+            "left_ankle_roll_joint",
+            "right_hip_pitch_joint",
+            "right_hip_roll_joint",
+            "right_hip_yaw_joint",
+            "right_knee_joint",
+            "right_ankle_pitch_joint",
+            "right_ankle_roll_joint",
         ],
         scale=0.25, use_default_offset=True, 
         preserve_order=True
@@ -247,36 +247,36 @@ class ObservationsCfg:
         joint_pos_rel = ObsTerm(func=mdp.joint_pos_rel,
                                 params={"asset_cfg": SceneEntityCfg("robot", 
                                 joint_names=[
-                                    "JOINT_HIP_PITCH_L",
-                                    "JOINT_HIP_ROLL_L",
-                                    "JOINT_HIP_YAW_L",
-                                    "JOINT_KNEE_PITCH_L",
-                                    "JOINT_ANKLE_PITCH_L",
-                                    "JOINT_ANKLE_ROLL_L",
-                                    "JOINT_HIP_PITCH_R",
-                                    "JOINT_HIP_ROLL_R",
-                                    "JOINT_HIP_YAW_R",
-                                    "JOINT_KNEE_PITCH_R",
-                                    "JOINT_ANKLE_PITCH_R",
-                                    "JOINT_ANKLE_ROLL_R",
+                                    "left_hip_pitch_joint",
+                                    "left_hip_roll_joint",
+                                    "left_hip_yaw_joint",
+                                    "left_knee_joint",
+                                    "left_ankle_pitch_joint",
+                                    "left_ankle_roll_joint",
+                                    "right_hip_pitch_joint",
+                                    "right_hip_roll_joint",
+                                    "right_hip_yaw_joint",
+                                    "right_knee_joint",
+                                    "right_ankle_pitch_joint",
+                                    "right_ankle_roll_joint",
                                 ], 
                                 preserve_order=True)},
                                 noise=Unoise(n_min=-0.02, n_max=0.02))
         joint_vel_rel = ObsTerm(func=mdp.joint_vel_rel,
                                 params={"asset_cfg": SceneEntityCfg("robot", 
                                 joint_names=[
-                                    "JOINT_HIP_PITCH_L",
-                                    "JOINT_HIP_ROLL_L",
-                                    "JOINT_HIP_YAW_L",
-                                    "JOINT_KNEE_PITCH_L",
-                                    "JOINT_ANKLE_PITCH_L",
-                                    "JOINT_ANKLE_ROLL_L",
-                                    "JOINT_HIP_PITCH_R",
-                                    "JOINT_HIP_ROLL_R",
-                                    "JOINT_HIP_YAW_R",
-                                    "JOINT_KNEE_PITCH_R",
-                                    "JOINT_ANKLE_PITCH_R",
-                                    "JOINT_ANKLE_ROLL_R",
+                                    "left_hip_pitch_joint",
+                                    "left_hip_roll_joint",
+                                    "left_hip_yaw_joint",
+                                    "left_knee_joint",
+                                    "left_ankle_pitch_joint",
+                                    "left_ankle_roll_joint",
+                                    "right_hip_pitch_joint",
+                                    "right_hip_roll_joint",
+                                    "right_hip_yaw_joint",
+                                    "right_knee_joint",
+                                    "right_ankle_pitch_joint",
+                                    "right_ankle_roll_joint",
                                 ], 
                                 preserve_order=True)},
                                 scale=0.05, noise=Unoise(n_min=-1.5, n_max=1.5))
@@ -305,18 +305,18 @@ class ObservationsCfg:
         joint_pos_rel = ObsTerm(func=mdp.joint_pos_rel,
                                 params={"asset_cfg": SceneEntityCfg("robot",
                                 joint_names=[
-                                    "JOINT_HIP_PITCH_L",
-                                    "JOINT_HIP_ROLL_L",
-                                    "JOINT_HIP_YAW_L",
-                                    "JOINT_KNEE_PITCH_L",
-                                    "JOINT_ANKLE_PITCH_L",
-                                    "JOINT_ANKLE_ROLL_L",
-                                    "JOINT_HIP_PITCH_R",
-                                    "JOINT_HIP_ROLL_R",
-                                    "JOINT_HIP_YAW_R",
-                                    "JOINT_KNEE_PITCH_R",
-                                    "JOINT_ANKLE_PITCH_R",
-                                    "JOINT_ANKLE_ROLL_R",
+                                    "left_hip_pitch_joint",
+                                    "left_hip_roll_joint",
+                                    "left_hip_yaw_joint",
+                                    "left_knee_joint",
+                                    "left_ankle_pitch_joint",
+                                    "left_ankle_roll_joint",
+                                    "right_hip_pitch_joint",
+                                    "right_hip_roll_joint",
+                                    "right_hip_yaw_joint",
+                                    "right_knee_joint",
+                                    "right_ankle_pitch_joint",
+                                    "right_ankle_roll_joint",
                                 ],
                                 preserve_order=True)},
                                 )
@@ -325,18 +325,18 @@ class ObservationsCfg:
         joint_vel_rel = ObsTerm(func=mdp.joint_vel_rel, 
                                 params={"asset_cfg": SceneEntityCfg("robot", 
                                 joint_names=[
-                                    "JOINT_HIP_PITCH_L",
-                                    "JOINT_HIP_ROLL_L",
-                                    "JOINT_HIP_YAW_L",
-                                    "JOINT_KNEE_PITCH_L",
-                                    "JOINT_ANKLE_PITCH_L",
-                                    "JOINT_ANKLE_ROLL_L",
-                                    "JOINT_HIP_PITCH_R",
-                                    "JOINT_HIP_ROLL_R",
-                                    "JOINT_HIP_YAW_R",
-                                    "JOINT_KNEE_PITCH_R",
-                                    "JOINT_ANKLE_PITCH_R",
-                                    "JOINT_ANKLE_ROLL_R",
+                                    "left_hip_pitch_joint",
+                                    "left_hip_roll_joint",
+                                    "left_hip_yaw_joint",
+                                    "left_knee_joint",
+                                    "left_ankle_pitch_joint",
+                                    "left_ankle_roll_joint",
+                                    "right_hip_pitch_joint",
+                                    "right_hip_roll_joint",
+                                    "right_hip_yaw_joint",
+                                    "right_knee_joint",
+                                    "right_ankle_pitch_joint",
+                                    "right_ankle_roll_joint",
                                 ],
                                 preserve_order=True)},
                                 scale=0.05)
@@ -349,7 +349,7 @@ class ObservationsCfg:
         #     params={"sensor_cfg": SceneEntityCfg("height_scanner")},
         #     clip=(-1.0, 5.0),
         # )
-        contact_mask = ObsTerm(func=mdp.contact_mask, params={"sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*")})
+        contact_mask = ObsTerm(func=mdp.contact_mask, params={"sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ankle_roll.*")})
 
         def __post_init__(self):
             self.history_length = 5
@@ -412,7 +412,7 @@ class RewardsCfg:
     joint_deviation_legs = RewTerm(
         func=mdp.joint_deviation_l1,
         weight=-0.7,
-        params={"asset_cfg": SceneEntityCfg("robot", joint_names=["JOINT_HIP_ROLL.*", "JOINT_HIP_YAW.*"])},
+        params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_hip_roll_joint", ".*_hip_yaw_joint"])},
     )
 
     # joint_pos_penalty = RewTerm(
@@ -452,7 +452,7 @@ class RewardsCfg:
             "threshold": 0.55,
             "command_name": "base_velocity",
             "command_threshold": 0.05,
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*"),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ankle_roll.*"),
         },
     )
     '''
@@ -461,7 +461,7 @@ class RewardsCfg:
         func=mdp.feet_contact_number,
         weight=0.5,#1.2,
         params={
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*"),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ankle_roll.*"),
             "period": 0.6,
         },
     )
@@ -473,8 +473,8 @@ class RewardsCfg:
         func=mdp.feet_slide,
         weight=-0.2,
         params={
-            "asset_cfg": SceneEntityCfg("robot", body_names=".*ANKLE_ROLL.*"),
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*"),
+            "asset_cfg": SceneEntityCfg("robot", body_names=".*ankle_roll.*"),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ankle_roll.*"),
         },
     )
     feet_clearance = RewTerm(
@@ -484,7 +484,7 @@ class RewardsCfg:
             "std": 0.05,
             "tanh_mult": 2.0,
             "target_height": 0.1,
-            "asset_cfg": SceneEntityCfg("robot", body_names=".*ANKLE_ROLL.*"),
+            "asset_cfg": SceneEntityCfg("robot", body_names=".*ankle_roll.*"),
         },
     )
 
@@ -494,7 +494,7 @@ class RewardsCfg:
         weight=-1,
         params={
             "threshold": 1,
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=["(?!.*ANKLE.*).*"]),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=["(?!.*ankle.*).*"]),
         },
     )
 
