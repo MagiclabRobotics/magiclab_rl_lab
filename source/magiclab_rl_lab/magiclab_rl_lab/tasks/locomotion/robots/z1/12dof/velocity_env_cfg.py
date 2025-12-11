@@ -172,7 +172,6 @@ class EventCfg:
 class CommandsCfg:
     """Command specifications for the MDP."""
 
-    #NOTE: batch set vel to 0 in play.py
     # base_velocity = mdp.UniformLevelVelocityCommandCfg(
     #     asset_name="robot",
     #     resampling_time_range=(10.0, 10.0),
@@ -430,7 +429,7 @@ class RewardsCfg:
 
     # -- robot
     flat_orientation_l2 = RewTerm(func=mdp.flat_orientation_l2, weight=-5.0)
-    base_height = RewTerm(func=mdp.base_height_l2, weight=-20, params={"target_height": 0.7})
+    base_height = RewTerm(func=mdp.base_height_l2, weight=-10, params={"target_height": 0.7})
 
     stand_still = RewTerm(
         func=mdp.stand_still_joint_deviation_l1,
@@ -457,15 +456,27 @@ class RewardsCfg:
         },
     )
     '''
+    # feet_air_time = RewTerm(
+    #     func=mdp.feet_air_time,
+    #     weight=0.1,
+    #     params={
+    #         "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*"),
+    #         "command_name": "base_velocity",
+    #         "threshold": 0.5,
+    #     },
+    # )
 
     feet_contact_number = RewTerm(
         func=mdp.feet_contact_number,
-        weight=0.3,#1.2,
+        weight=0.5,#1.2,
         params={
             "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*ANKLE_ROLL.*"),
             "period": 0.6,
         },
     )
+
+
+
 
     feet_slide = RewTerm(
         func=mdp.feet_slide,
