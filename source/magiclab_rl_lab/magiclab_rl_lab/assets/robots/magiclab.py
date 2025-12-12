@@ -87,7 +87,7 @@ class MagiclabUrdfFileCfg(sim_utils.UrdfFileCfg):
 
 MAGICLAB_Z1_12DOF_CFG = MagiclabArticulationCfg(
     spawn=MagiclabUrdfFileCfg(
-        asset_path=f"{MAGICLAB_ROS_DIR}/source/magiclab_rl_lab/magiclab_rl_lab/data/robots/magicbot-Z1/urdf/MagicBotZ1_arm_ready_pos.urdf",
+        asset_path=f"{MAGICLAB_ROS_DIR}/source/magiclab_rl_lab/magiclab_rl_lab/data/robots/magicbot-Z1/urdf/MagicBotZ1_12dof_arm_ready_pos.urdf",
     ),
     init_state=ArticulationCfg.InitialStateCfg(
         pos=(0.0, 0.0, 0.69),

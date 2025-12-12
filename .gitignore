@@ -72,3 +72,4 @@ datasets
 
 # Mimic
 *.npz
+*.bak
